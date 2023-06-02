@@ -1,0 +1,22 @@
+@import "./reset.css";
+
+html,
+body {
+  --color-border: #938f87;
+  --color-bg: #ffff89;
+  --color-text: #181819;
+
+  --border01: 1px solid var(--color-border);
+  --border02: 6px double var(--color-border);
+
+  background-color: var(--color-bg);
+  color: var(--color-text);
+
+  overflow-x: hidden;
+}
+
+.app {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
