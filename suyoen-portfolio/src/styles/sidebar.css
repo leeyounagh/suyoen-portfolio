@@ -1,0 +1,41 @@
+.sidebar {
+  width: 500px;
+  height: 100vh;
+  position: fixed;
+  height: 100%;
+  background-color: black;
+  opacity: 0.8;
+  top: 0;
+  left: -200px;
+  transition: left 2s ease-in-out;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.sidebar-menu {
+  margin-top: 50px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  opacity: 1;
+  padding: 10px;
+  background-color: lightgray;
+  color: black;
+  margin-bottom: 5px;
+
+  z-index: 10;
+}
+
+.sidebar-menu li:hover {
+  background-color: white;
+}

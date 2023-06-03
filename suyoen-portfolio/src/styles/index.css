@@ -33,3 +33,8 @@ body {
   max-width: 1920px;
   overflow-y: hidden;
 }
+
+.sidebar-toggle {
+  position: fixed;
+  top: 0;
+}

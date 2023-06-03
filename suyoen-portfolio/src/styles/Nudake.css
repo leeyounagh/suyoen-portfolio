@@ -2,11 +2,10 @@
   width: 100%;
   height: 100vh;
   display: flex;
-  overflow: hidden;
   align-items: center;
   justify-content: center;
   position: relative;
-  background-size: center center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -29,7 +28,6 @@ a {
   color: white;
   font-weight: 900;
   font-size: 2rem;
-  /* background-color: black; */
 }
 .nudake > header > h1 {
   width: 30%;
@@ -42,4 +40,5 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: none;
 }
