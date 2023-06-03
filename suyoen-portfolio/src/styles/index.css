@@ -1,9 +1,15 @@
 @import "./reset.css";
-
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
 html,
 body {
   --color-border: #938f87;
-  --color-bg: #ffff89;
+  --color-bg: black;
   --color-text: #181819;
 
   --border01: 1px solid var(--color-border);
@@ -12,11 +18,18 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
 
-  overflow-x: hidden;
+  overflow: hidden;
+  font-family: "Fjalla One", sans-serif;
+  font-family: "Lora", serif;
+  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto Slab", serif;
 }
 
 .app {
+  margin: 0;
+  padding: 0;
   max-width: 1920px;
-  margin: 0 auto;
-  padding: 0 1rem;
+  overflow-y: hidden;
 }

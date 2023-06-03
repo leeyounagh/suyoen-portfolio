@@ -1,21 +1,21 @@
-import Header from "./components/Header";
-import Suyoen from "./components/Suyoen";
-import Skills from "./components/Skills";
-import Project from "./components/Project";
-import Career from "./components/Career";
-import Education from "./components/Education";
-import Footer from "./components/Footer";
+import { Routes, Route } from "react-router-dom";
+import Main from "./components/Main";
+import Skills from "./pages/Skills";
+import Project from "./pages/Project";
+import Career from "./pages/Career";
+import Education from "./pages/Education";
+
 function App() {
   return (
-    <>
-      <Header />
-      <Suyoen />
-      <Skills />
-      <Project />
-      <Career />
-      <Education />
-      <Footer />
-    </>
+    <div className="app">
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/skill" element={<Skills />} />
+        <Route path="/project" element={<Project />} />
+        <Route path="/career" element={<Career />} />
+        <Route path="/education" element={<Education />} />
+      </Routes>
+    </div>
   );
 }
 
