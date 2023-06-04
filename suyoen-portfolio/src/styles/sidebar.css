@@ -1,17 +1,44 @@
 .sidebar {
-  width: 500px;
+  width: 400px;
   height: 100vh;
   position: fixed;
   height: 100%;
-  background-color: black;
+  background-color: #50508c;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   opacity: 0.8;
   top: 0;
-  left: -200px;
-  transition: left 2s ease-in-out;
+  left: -300px;
 }
 
+@keyframes showUp {
+  0% {
+    transform: translate(-100%, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes showOut {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-100%, 0);
+    display: none;
+  }
+}
 .sidebar.open {
-  left: 0;
+  left: 0px;
+  animation: showUp 1s ease-in-out;
+}
+.sidebar.closed {
+  left: 0px;
+  animation: showOut 1s ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .toggle-button {
@@ -29,13 +56,14 @@
 .sidebar-menu li {
   opacity: 1;
   padding: 10px;
-  background-color: lightgray;
-  color: black;
+  font-size: 3rem;
+  color: #66cdaa;
   margin-bottom: 5px;
-
+  font-weight: 900;
   z-index: 10;
+  cursor: pointer;
+  text-align: center;
 }
 
 .sidebar-menu li:hover {
-  background-color: white;
 }

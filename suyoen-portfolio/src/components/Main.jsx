@@ -11,7 +11,6 @@ import {
   getDistance,
   getScrupedPercent,
 } from "../utils/utils";
-import { Link } from "react-router-dom";
 
 const Main = () => {
   const canvasRef = useRef(null);
@@ -118,7 +117,7 @@ const Main = () => {
 
     const checkPercent = throttle(() => {
       const percent = getScrupedPercent(ctx, canvasWidth, canvasHeight);
-      if (percent > 15) {
+      if (percent > 30) {
         currIndex = (currIndex + 1) % imageSrcs.length;
         drawImage();
       }
@@ -148,18 +147,18 @@ const Main = () => {
         </h1>
 
         <ul className="list">
-          <Link to="/skill">
+          <a href="/skill">
             <li>Skills</li>
-          </Link>
-          <Link to="/project">
+          </a>
+          <a href="/project">
             <li>Projects</li>
-          </Link>
-          <Link to="/career">
+          </a>
+          <a href="/career">
             <li>career&Licence</li>
-          </Link>
-          <Link to="/education">
+          </a>
+          <a href="/education">
             <li>education</li>
-          </Link>
+          </a>
         </ul>
       </header>
       <canvas ref={canvasRef} />

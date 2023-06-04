@@ -23,7 +23,7 @@ import { data } from "../data/data";
 
 const RotateCanvas = () => {
   const [selected, setSelected] = useState(data["JS"]);
-  const [isNavOpen, setIsNavOpen] = useState(false);
+
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -172,15 +172,6 @@ const RotateCanvas = () => {
 
   return (
     <div className="rotate-canvas-wrapper">
-      <button
-        className="sidebar-toggle"
-        onClick={() => {
-          setIsNavOpen(!isNavOpen);
-        }}
-      >
-        <span>사이드바</span>
-      </button>
-      {isNavOpen && <SideBar isNavOpen={isNavOpen} />}
       <canvas ref={canvasRef}></canvas>
       <aside>
         <h1>{selected.title}</h1>
