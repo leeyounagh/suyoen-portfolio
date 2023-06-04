@@ -1,0 +1,37 @@
+.education-wrapper {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../assets/우주.gif");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.education-board {
+  width: 50%;
+  height: 40%;
+  border-radius: 50px;
+  background-color: #3c5087;
+  position: relative;
+  margin-top: 50px;
+  -webkit-box-shadow: 3px 3px 10px 3px #474747;
+  box-shadow: 3px 3px 10px 3px #474747;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.education-board h1 {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: 600;
+}
+.education-board h2 {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 600;
+}
