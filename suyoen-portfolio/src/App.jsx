@@ -23,7 +23,7 @@ function App() {
           }}
         >
           <span className="menu-title">
-            <h1>menu</h1>
+            <h1>Menu</h1>
           </span>
         </button>
       )}

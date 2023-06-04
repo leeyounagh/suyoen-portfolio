@@ -16,6 +16,18 @@ const Main = () => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
+    const circle = document.querySelector(".circle");
+
+    document.addEventListener("mousemove", (e) => {
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
+
+      circle.style.left = mouseX + "px";
+      circle.style.top = mouseY + "px";
+    });
+  }, []);
+
+  useEffect(() => {
     const canvas = canvasRef.current;
 
     const canvasParent = canvas.parentNode;
@@ -124,44 +136,43 @@ const Main = () => {
     }, 500);
 
     canvas.addEventListener("mousedown", onMousedown);
+
     window.addEventListener("resize", resize);
     resize();
 
     return () => {
       canvas.removeEventListener("mousedown", onMousedown);
+
       window.removeEventListener("resize", resize);
     };
   }, []);
 
   return (
-    <div className="nudake">
-      <header>
-        <h1>
-          <a
-            href="https://www.notion.so/9926f4e2467448ce9e3f952998a5f1cb?pvs=4"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Suyoen
-          </a>
-        </h1>
+    <div className="main-wrapper">
+      <div className="circle"></div>
+      <div className="nudake">
+        <header>
+          <h1>
+            <a href="/">Suyoen</a>
+          </h1>
 
-        <ul className="list">
-          <a href="/skill">
-            <li>Skills</li>
-          </a>
-          <a href="/project">
-            <li>Projects</li>
-          </a>
-          <a href="/career">
-            <li>career&Licence</li>
-          </a>
-          <a href="/education">
-            <li>education</li>
-          </a>
-        </ul>
-      </header>
-      <canvas ref={canvasRef} />
+          <ul className="list">
+            <a href="/skill">
+              <li>Skills</li>
+            </a>
+            <a href="/project">
+              <li>Projects</li>
+            </a>
+            <a href="/career">
+              <li>career&Licence</li>
+            </a>
+            <a href="/education">
+              <li>education</li>
+            </a>
+          </ul>
+        </header>
+        <canvas ref={canvasRef} />
+      </div>
     </div>
   );
 };
